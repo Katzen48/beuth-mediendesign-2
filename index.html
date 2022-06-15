@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Social Freezing</title>
+        <link rel="stylesheet" type="text/css" href="app.css">
+        <script src="app.js" type="application/javascript"></script>
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="frau transition-2s rechts" id="frau"></div>
+            <!-------------
+            | Vor Eingabe |
+            -------------->
+            <div class="info transition-2s" id="info">
+                <div class="bubble one-right"></div>
+                <div class="bubble two-right">
+                    <p class="bubble-text cronos">Mit Social Freezing die Fruchtbarkeit im Alter erhöhen.</p>
+                </div>
+            </div>
+
+            <div class="bubble input transition-2s" id="input" style="z-index: 1">
+                <p class="bubble-text cronos bubble-input">Finden Sie heraus,<br> wie sie ihre Fruchtbarkeit verbessern können</p>
+                <div class="input-elements">
+                    <form onsubmit="return onSubmit()" id="form">
+                        <input class="age" type="number" placeholder="Ihr Alter" min="18" max="56" id="age-input" required>
+                        <button class="ok-button pointer" onclick="onSubmit()" type="submit" id="submit">Ok</button>
+                    </form>
+                </div>
+            </div>
+
+            <!--------------
+            | nach Eingabe |
+            --------------->
+
+            <div class="bubble input transition-2s transition-delay-2s hidden" id="age-bubble" style="z-index: 0">
+                <p class="bubble-text cronos text-50">Ihr Alter: <p class="cronos bubble-text age-text text-50" id="age">32</p></p>
+            </div>
+
+            <div class="ova transition-2s transition-delay-2s hidden">
+                <div class="ova-title cronos">Anzahl Eizellen</div>
+                <div class="ova-legend">
+                    <div class="ova-legend-image"></div>
+                    <p class="ova-legend-text cronos">= 2.000 Eizellen</p>
+                </div>
+                <div class="ova-groups">
+                    <div class="ova-group" style="--index: 0" id="ova-group-0">
+                        <div class="ova-wrapper" id="ova-0"></div>
+                        <p class="ova-text cronos" id="ova-text-0">35</p>
+                    </div>
+                    <div class="ova-group" style="--index: 1" id="ova-group-1">
+                        <div class="ova-wrapper" id="ova-1"></div>
+                        <p class="ova-text cronos" id="ova-text-1">35</p>
+                    </div>
+                    <div class="ova-group" style="--index: 2" id="ova-group-2">
+                        <div class="ova-wrapper" id="ova-2"></div>
+                        <p class="ova-text cronos" id="ova-text-2">35</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fertility transition-2s transition-delay-2s hidden">
+                <div class="fertility-title cronos">Fruchtbarkeit</div>
+
+                <div class="fertility-groups">
+                    <div class="fertility-group" style="--index: 0">
+                        <p class="fertility-value cronos" id="fertility-value-with-0" style="--percent-with: 0.2; --percent-without: 0.3">22%</p>
+                        <div class="fertility-with rounded-top" id="fertility-with-0" style="--percent-with: 0.2; --percent-without: 0.3"></div>
+                        <div class="fertility-without" id="fertility-without-0" style="--percent-with: 0.2; --percent-without: 0.3"></div>
+                        <p class="fertility-age cronos text-purple" id="fertility-age-0">35</p>
+                    </div>
+                    <div class="fertility-group" style="--index: 1">
+                        <p class="fertility-value cronos" id="fertility-value-with-1" style="--percent-with: 0.2; --percent-without: 0.3">22%</p>
+                        <div class="fertility-with rounded-top" id="fertility-with-1" style="--percent-with: 0.2; --percent-without: 0.3"></div>
+                        <div class="fertility-without" id="fertility-without-1" style="--percent-with: 0.2; --percent-without: 0.3"></div>
+                        <p class="fertility-age cronos text-purple" id="fertility-age-1">35</p>
+                    </div>
+                    <div class="fertility-group" style="--index: 2">
+                        <p class="fertility-value cronos" id="fertility-value-with-2" style="--percent-with: 0.2; --percent-without: 0.3">22%</p>
+                        <div class="fertility-with rounded-top" id="fertility-with-2" style="--percent-with: 0.2; --percent-without: 0.3"></div>
+                        <div class="fertility-without" id="fertility-without-2" style="--percent-with: 0.2; --percent-without: 0.3"></div>
+                        <p class="fertility-age cronos text-purple" id="fertility-age-2">35</p>
+                    </div>
+
+                    <div class="fertility-legend">
+                        <div class="fertility-legend-purple">
+                            <div class="fertility-legend-purple-color"></div>
+                            <p class="fertility-legend-text cronos text-purple text-20">Freezing</p>
+                        </div>
+                        <div class="fertility-legend-blue">
+                            <div class="fertility-legend-blue-color"></div>
+                            <p class="fertility-legend-text cronos text-blue text-20">Ohne</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

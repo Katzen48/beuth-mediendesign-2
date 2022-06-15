@@ -1,0 +1,467 @@
+@font-face {
+    font-family: 'CronosPro-Regular';
+    src: url('fonts/7032.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadPro-Regular';
+    src: url('fonts/6851.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.myriad {
+    font-family: MyriadPro-Regular;
+}
+
+.cronos {
+    font-family: CronosPro-Regular;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.content {
+    position: relative;
+    background-image: url("images/Hintergrund.png");
+    background-size: cover;
+    width: 1366px;
+    height: 786px;
+}
+
+.frau {
+    background-image: url("images/Frau.png");
+    width: 520px;
+    overflow: hidden;
+    height: 786px;
+    object-fit: contain;
+}
+
+.rechts {
+    position: absolute;
+    right: 0px;
+    top: 40px;
+}
+
+.links {
+    position: absolute;
+    right: 846px;
+    top: 40px;
+}
+
+.info {
+    position: absolute;
+    right: 30px;
+}
+
+.input {
+    position: absolute;
+    left: 90px;
+    bottom: 10px;
+    background-color: rgba(62, 128, 164, 0.4);
+    width: 471px !important;
+    height: 471px !important;
+}
+
+.input-elements {
+    position: absolute;
+    height: 56px;
+    top: 57%;
+    left: 10%;
+    width: 350px;
+}
+
+.bubble-input {
+    width: 420px !important;
+    left: 30px;
+    top: 17% !important;
+}
+
+.bubble-text {
+    position: absolute;
+    top: 27%;
+    font-size: 30pt;
+    border-radius: 50%;
+    width: 425px;
+    height: 150px;
+    text-align: center;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(62, 128, 164, 0.729);
+    width: 425px;
+    height: 425px;
+}
+
+.one-right {
+    right: 0;
+    top: 35px;
+}
+
+.two-right {
+    right: 195px;
+    top: -30px;
+    background-color: rgba(62, 128, 164, 0.51);
+}
+
+.age {
+    font-family: CronosPro-Regular;
+    font-size: 30pt;
+    text-align: center;
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 0px;
+    border-width: 1px;
+    border-color: rgb(212, 94, 149);
+    border-style: solid;
+    background-color: rgba(212, 94, 159, 0.49);
+    -moz-appearance: textfield;
+}
+
+.age::placeholder {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+}
+
+.age::-webkit-outer-spin-button,
+.age::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.age:focus {
+    outline: none;
+}
+
+.ok-button {
+    font-family: CronosPro-Regular;
+    font-size: 30pt;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 59px;
+    width: 100px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgb(212, 94, 149);
+    border-style: solid;
+    background-color: rgb(212, 94, 159);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.age-text {
+    left: 155px;
+    color: rgb(239, 55, 154);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.transition-2s {
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.transition-delay-2s {
+    transition-delay: 2s;
+}
+.hidden {
+    opacity: 0;
+}
+
+.text-50 {
+    font-size: 50pt;
+}
+
+.text-20 {
+    font-size: 20pt;
+}
+
+.ova {
+    position: absolute;
+    left: 580px;
+    top: 20px;
+    width: 675px;
+    height: 435px;
+}
+
+.ova-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 395px;
+    height: 60px;
+    color: #23749f;
+    font-size: 35pt;
+    text-align: right;
+}
+
+.ova-groups {
+    position: absolute;
+    top: 60px;
+    height: 375px;
+    width: 675px;
+}
+
+.ova-group {
+    position: absolute;
+    top: 0;
+    left: calc(225px * var(--index));
+    height: 375px;
+    width: 205px;
+}
+
+.ova-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(1, -1);
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    height: 275px;
+    width: 205px;
+}
+
+.ova-image {
+    position: absolute;
+    top: calc((50px + 5px) * var(--row));
+    left: calc((50px - 10px) * var(--column));
+
+    -webkit-mask-image: url(images/baby-solid.svg);
+    mask-image: url(images/baby-solid.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    transform: scale(1, -1);
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+
+    width: 50px;
+    height: 50px;
+
+    background:-moz-linear-gradient(bottom, #d45e9f var(--percent), transparent min(calc(100% - var(--percent)), 1%), transparent max(calc(100% - var(--percent) - 1%), 0%));
+    background:-webkit-linear-gradient(bottom, #d45e9f var(--percent), transparent min(calc(100% - var(--percent)), 1%), transparent max(calc(100% - var(--percent) - 1%), 0%));
+}
+
+.ova-text {
+    position: absolute;
+    bottom: 0;
+    font-size: 30pt;
+    text-align: center;
+    width: 205px;
+    color: #00649c;
+}
+
+.ova-legend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 60px;
+}
+
+.ova-legend-image {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(images/baby-solid.svg);
+    mask-image: url(images/baby-solid.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background: #d45e9f;
+    vertical-align: center;
+}
+
+.ova-legend-text {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    height: 30px;
+    font-size: 25pt;
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+    color: rgb(0, 100, 156);
+}
+
+.fertility {
+    position: absolute;
+    left: 650px;
+    bottom: 20px;
+    width: 675px;
+    height: 320px;
+
+    --percent-factor: 2;
+}
+
+.fertility-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 675px;
+    height: 50px;
+    color: #d45e9f;
+    font-size: 35pt;
+    text-align: center;
+}
+
+.fertility-groups {
+    position: absolute;
+    top: 60px;
+    height: 260px;
+    width: 675px;
+}
+
+.fertility-group {
+    position: absolute;
+    top: 0;
+    left: calc(175px * var(--index));
+    height: 260px;
+    width: 150px;
+}
+
+.fertility-legend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+    width: 175px;
+}
+
+.fertility-legend-purple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 175px;
+    height: 50px;
+}
+
+.fertility-legend-blue {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 175px;
+    height: 50px;
+}
+
+.fertility-legend-purple-color {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #d45e9f;
+    width: 75px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.fertility-legend-blue-color {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #00649c;
+    width: 75px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.fertility-legend-text {
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    width: 85px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+}
+
+.text-purple {
+    color: #d45e9f;
+}
+
+.text-blue {
+    color: #00649c;
+}
+
+.fertility-age {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font-size: 30pt;
+    padding: 0;
+    margin: 0;
+}
+
+.fertility-with {
+    position: absolute;
+    bottom: calc(40px + 180px * var(--percent-without) * var(--percent-factor));
+    left: 35px;
+    width: 80px;
+    height: calc(180px * var(--percent-with) * var(--percent-factor));
+    background-color: #d45e9f;
+
+    transform: scale(1, -1);
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+}
+
+.fertility-without {
+    position: absolute;
+    bottom: 40px;
+    left: 35px;
+    width: 80px;
+    height: calc(180px * var(--percent-without) * var(--percent-factor));
+    background-color: #00649c;
+
+    transform: scale(1, -1);
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.fertility-value {
+    position: absolute;
+    bottom: calc(40px + 180px * var(--percent-without) * var(--percent-factor) + 180px * var(--percent-with) * var(--percent-factor));
+    left: 35px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 30pt;
+    padding: 0;
+    margin: 0;
+}
+
+.rounded-top {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
